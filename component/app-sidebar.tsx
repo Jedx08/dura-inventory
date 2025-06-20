@@ -31,6 +31,7 @@ import {
   ChevronUp,
   User2,
 } from "lucide-react";
+import Image from "next/image";
 
 // Menu items
 const items = [
@@ -84,12 +85,13 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader className="border-b border-sidebar-border">
         <div className="flex items-center gap-2 px-4 py-2">
-          <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-            <Package className="size-4" />
+          <div className="flex aspect-square size-10 items-center justify-center rounded-lg text-sidebar-primary-foreground">
+            {/* <Package className="size-4" /> */}
+            <Image src={"/logo.png"} alt="Logo" width={40} height={40} />
           </div>
           <div className="grid flex-1 text-left text-sm leading-tight">
-            <span className="truncate font-semibold">Inventory Pro</span>
-            <span className="truncate text-xs">Management System</span>
+            <span className="truncate font-semibold">Duraville IT</span>
+            <span className="truncate text-xs">Inventory System</span>
           </div>
         </div>
       </SidebarHeader>
